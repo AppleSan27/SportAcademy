@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="zgASzy0OgcuWIHE6Go9brhoxhXtQFtsZ6L2SOQzC">
+
+  <title>Laravel</title>
+
+  <!-- Styles -->
+  
+  <link href="css/main.css" rel="stylesheet">
+
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
+
+  
+  <script src="libs/page-scale/page-scale.js"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bracket/0.11.1/jquery.bracket.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bracket/0.11.1/jquery.bracket.min.js"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ru.js"></script>
+
+  
+  <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.css'/>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.js'></script>
+
+  <!-- Scripts -->
+  
+  <script src="js/main.js"></script>
+
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="http://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      PageScaleJs(document.getElementById("app"), {
+        width: 1260,
+        height: 1000,
+        from: 1260,
+        to: 480,
+        onChangeScale: function (scale) {
+          //receive value of scale factor
+        }
+      });
+    });
+  </script>
+</head>
+<body class="">
+<div id="container">
+  <div id="app">
+    <header>
+
+      
+      <div class="desktop-header__container">
+        <div class="uk-grid-collapse uk-child-width-1-1 uk-visible@s" uk-grid>
+          <div class="desktop-header__top">
+            <div class="uk-container">
+
+              <div class="uk-grid-collapse uk-child-width-auto uk-flex-between" uk-grid>
+
+                
+                <div class="uk-flex uk-flex-middle">
+                  <div class="uk-grid-medium uk-child-width-auto" uk-grid>
+                    <div class="uk-flex uk-flex-middle">
+                      <a class="desktop-header__logo" href="index.html">
+                        <img src="img/logo.png" alt="Школа волейбола">
+                      </a>
+                    </div>
+                    <div class="uk-flex uk-flex-middle">
+                      <div class="desktop-header__desc"></div>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div class="uk-flex uk-flex-middle">
+                  <div class="uk-flex uk-flex-column uk-flex-bottom">
+                    <div>
+                      
+                                              <div class="uk-grid-small" uk-grid>
+                          <div>
+                            <a class="desktop-header__login" href="login.html">Войти</a>
+                          </div>
+                                                      <div>
+                              <a class="desktop-header__register" href="register.html">Зарегистрироваться</a>
+                            </div>
+                                                  </div>
+                                          </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="uk-margin">
+                <div class="desktop-header-navbar__container">
+                  <ul class="uk-navbar-nav">
+                    <li class="desktop-header-navbar__item"><a href="schools.html">Направления</a>
+                    </li>
+                    <li class="desktop-header-navbar__item"><a href="login.html#">О нас</a></li>
+                    <li class="desktop-header-navbar__item"><a href="login.html#">Новости</a></li>
+                    
+                    
+                    
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </header>
+
+    <main uk-height-viewport="expand: true">
+
+              <div class="breadcrumbs__container">
+    <div class="breadcrumbs__list">
+                        <div class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+          </div>
+                                <div class="breadcrumbs__item">
+            <span class="breadcrumbs__title">Войти</span>
+          </div>
+                  </div>
+  </div>
+
+      
+        <div class="uk-container uk-flex uk-flex-middle uk-flex-center">
+    <div class="login-page-window__wrapper uk-width-1-1 uk-width-1-3@s">
+      <div class="login-page-window__spot">
+
+        <svg width="197px" height="174px" viewBox="0 0 197 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <linearGradient x1="82.7195083%" y1="28.5461871%" x2="-5.23525046%" y2="78.2830492%" id="linearGradient-1">
+              <stop stop-color="#97E879" offset="0%"></stop>
+              <stop stop-color="#D8F78F" offset="98%"></stop>
+            </linearGradient>
+            <linearGradient x1="147.671964%" y1="-10.7768916%" x2="38.1153461%" y2="55.0418518%" id="linearGradient-2">
+              <stop stop-color="#97E879" offset="0%"></stop>
+              <stop stop-color="#D8F78F" offset="98%"></stop>
+            </linearGradient>
+            <linearGradient x1="46.0199198%" y1="100.713359%" x2="70.7575979%" y2="-108.49546%" id="linearGradient-3">
+              <stop stop-color="#79E8E4" offset="0%"></stop>
+              <stop stop-color="#B9FBB3" offset="98%"></stop>
+            </linearGradient>
+            <linearGradient x1="40.5120034%" y1="98.9977878%" x2="56.2317896%" y2="18.6539228%" id="linearGradient-4">
+              <stop stop-color="#79E8E4" offset="0%"></stop>
+              <stop stop-color="#B9FBB3" offset="98%"></stop>
+            </linearGradient>
+            <linearGradient x1="30.5883097%" y1="29.4313204%" x2="80.3679042%" y2="74.7249819%" id="linearGradient-5">
+              <stop stop-color="#81E372" offset="0%"></stop>
+              <stop stop-color="#5ADB9A" offset="100%"></stop>
+            </linearGradient>
+            <linearGradient x1="-0.0676997148%" y1="49.9231623%" x2="99.9935496%" y2="49.9231623%" id="linearGradient-6">
+              <stop stop-color="#7FDD6F" offset="0%"></stop>
+              <stop stop-color="#97E774" offset="98%"></stop>
+            </linearGradient>
+            <linearGradient x1="0.184042062%" y1="49.9928066%" x2="99.9928262%" y2="49.9928066%" id="linearGradient-7">
+              <stop stop-color="#7FDD6F" offset="0%"></stop>
+              <stop stop-color="#97E774" offset="98%"></stop>
+            </linearGradient>
+            <linearGradient x1="206.904855%" y1="-47.4078694%" x2="4.97819926%" y2="70.7937195%" id="linearGradient-8">
+              <stop stop-color="#97E879" offset="0%"></stop>
+              <stop stop-color="#D8F78F" offset="98%"></stop>
+            </linearGradient>
+          </defs>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Категория" transform="translate(-106.000000, -1931.000000)" fill-rule="nonzero">
+              <g id="Ресурс-1" transform="translate(106.000000, 1931.000000)">
+                <path d="M82.35,33.83 C94.41,29.83 114.85,25.21 135.96,26.08 C98.35,8.46 56.81,0.67 39.92,10.32 C26.81,17.81 23.39,36.79 23.92,60.54 C34.49,52.72 54.27,43.08 82.35,33.83 Z" id="_Контур_" fill="url(#linearGradient-1)"></path>
+                <path d="M30.45,106.79 C35.2,122.15 43.27,136.42 56.91,145.44 C73.42,156.37 97.61,155.03 120.44,145.86 C116.644574,145.416442 112.875785,144.768838 109.15,143.92 C72,135.46 44.82,118.48 30.45,106.79 Z" id="_Контур_2" fill="url(#linearGradient-2)"></path>
+                <path d="M23.9,60.54 C20.9484603,62.5460579 18.3584208,65.0380411 16.24,67.91 C9.76,77.8 12.74,88.58 20.9,97.91 C23.8408184,101.123611 27.0343676,104.096454 30.45,106.8 C26.27,93.25 24.66,78.8 24.1,66.43 C24.0333333,64.4366667 23.9666667,62.4733333 23.9,60.54 Z" id="_Контур_3" fill="url(#linearGradient-3)"></path>
+                <path d="M155.69,124.11 C145.265608,133.3162 133.343826,140.672192 120.44,145.86 C162.29,150.86 187.49,127.23 194.19,106.06 C201.47,83.06 194.48,42.28 165.07,31.5 C155.71708,28.2065447 145.911356,26.3783017 136,26.08 C141.51,28.66 146.93,31.44 152.17,34.42 C193.22,57.73 184.53,98.43 155.69,124.11 Z" id="_Контур_4" fill="url(#linearGradient-4)"></path>
+                <path d="M82.35,33.83 C54.27,43.08 34.49,52.72 23.9,60.54 C23.94,62.4733333 24.0066667,64.4333333 24.1,66.42 C24.66,78.83 26.27,93.24 30.45,106.79 C44.82,118.48 71.95,135.46 109.15,143.92 C112.875785,144.768838 116.644574,145.416442 120.44,145.86 C133.343826,140.672192 145.265608,133.3162 155.69,124.11 C184.53,98.43 193.22,57.73 152.13,34.42 C146.89,31.42 141.47,28.66 135.96,26.08 C114.85,25.21 94.41,29.86 82.35,33.83 Z" id="_Контур_5" fill="url(#linearGradient-5)"></path>
+                <path d="M136.52,19 C143.8,21.91 170.89,23.66 172.35,19 C173.81,14.34 163.06,5.86 149.35,2.1 C135.05,-1.81 127.21,0.32 126.35,4.1 C125.49,7.88 131.86,17.11 136.52,19 Z" id="_Контур_6" fill="url(#linearGradient-6)"></path>
+                <path d="M9.24,63.6 C15.02,60.48 18.64,56.37 18.97,53.9 C19.3251053,50.7308834 19.2881599,47.5300757 18.86,44.37 C18,38.31 15,30.06 8.61,36.15 C2.22,42.24 0.71,53.41 1,58.67 C1.29,63.93 3.47,66.73 9.24,63.6 Z" id="_Контур_7" fill="url(#linearGradient-7)"></path>
+                <path d="M157.15,159.91 C164.43,148.78 158.77,147.97 153.3,149.19 C147.83,150.41 139.54,152 134.68,152 C122.33,152 115.25,150.18 112.62,154 C108.56,159.93 120.22,170.83 125.98,172.42 C136.2,175.3 149.86,171.05 157.15,159.91 Z" id="_Контур_8" fill="url(#linearGradient-8)"></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="login-page-window__container">
+        <h1 class="login-page-window__title uk-text-center@s">Войти</h1>
+
+        <div class="uk-flex uk-flex-center">
+          <form method="POST" action="login.html">
+            <input type="hidden" name="_token" value="zgASzy0OgcuWIHE6Go9brhoxhXtQFtsZ6L2SOQzC">
+            <div class="uk-grid-medium uk-child-width-1-1" uk-grid>
+              <div>
+                <input id="email" type="email" class="login-page-window__input " name="email" value="" placeholder="E-mail" required autocomplete="email" autofocus>
+                              </div>
+              <div>
+                <input id="password" type="password" class="login-page-window__input " name="password" placeholder="Пароль" required autocomplete="current-password">
+                              </div>
+              <div class="uk-margin-small">
+                <div class="login-page-window__remember">
+                  <input class="uk-checkbox" type="checkbox" name="remember" id="remember" >
+                  <label for="remember">Запомнить меня</label>
+                </div>
+              </div>
+
+              <div>
+                <button type="submit" class="login-page-window__submit">Войти</button>
+              </div>
+              <div class="uk-margin-small uk-text-center">
+                                  <a class="login-page-window__password-recovery" href="http://volley-test.tmweb.ru/password/reset">Забыли пароль?</a>
+                              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    </main>
+
+    <footer>
+      <!--Десктопный футер-->
+      <div class="footerTop__container uk-cover-container uk-visible@s">
+        <div class="uk-container uk-position-relative uk-position-z-index">
+          <div class="uk-grid-medium uk-child-width-auto uk-flex-between" uk-grid>
+            <div class="uk-width-1-1 uk-width-1-5@s">
+              <div class="uk-grid-large" uk-grid>
+                <div class="uk-width-1-1 uk-flex uk-flex-middle">
+                  <a href="index.html" class="footerTop__logo">
+                    <img src="img/logo-footer.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="uk-width-1-1 uk-width-1-4@s">
+              <div class="uk-grid-medium uk-child-width-1-1" uk-grid>
+                <div>
+                  <div class="uk-grid-large uk-child-width-1-1" uk-grid>
+                    <div class="uk-flex uk-flex-right">
+                      <a href="tel:88002452323" class="footerTop__phone">8 800 245-23-23</a>
+                    </div>
+                    <div class="uk-flex uk-flex-right">
+                      <a href="login.html#modal-callback" uk-toggle class="footerTop__button">Оставить заявку</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Мобильный футер-->
+      <div class="footerMobileTop__container uk-hidden@s">
+        <a href="index.html" class="footerMobileTop__logo">
+          <img src="http://volley-test.tmweb.ru/..." alt="">
+        </a>
+        <div class="footerMobileTop__desc">
+          ...
+        </div>
+
+        <div class="uk-margin">
+          <div class="footerMobileTop__title">Меню</div>
+          ...
+        </div>
+
+        <div class="uk-grid-collapse uk-child-width-1-1 uk-margin" uk-grid>
+          <div class="uk-flex uk-flex-left">
+            <a href="tel:..." class="footerMobileTop__phone">...</a>
+          </div>
+          <div class="uk-flex uk-flex-left">
+            <a href="login.html#modal-callback" uk-toggle class="footer__callback">Заказать звонок</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footerBottom__container">
+        <div class="uk-container">
+          <div class="uk-grid-small uk-flex-between" uk-grid>
+            <div class="uk-flex uk-flex-middle">
+              <div class="footerBottom__copy">
+                © 2019 - Академия Мегаспорт
+              </div>
+            </div>
+            <div class="uk-flex uk-flex-middle">
+              <a href="http://volley-test.tmweb.ru/privacy-policy/" class="footerBottom__pa">Политика конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
