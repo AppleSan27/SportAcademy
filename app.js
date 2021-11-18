@@ -30,13 +30,16 @@ const sessionConfig = {
   
 }
 
-// app.use((req, res, next) => {
-//   if(req.session.userEmail) {
-//     res.locals.userEmail = req.session.userEmail
-//     res.locals.userName = req.session.userName
-//   }
-//   next()
-// })
+app.use((req, res, next) => {
+  if(req.session.userEmail) {
+    res.locals.userEmail = req.session.userEmail
+    res.locals.userName = req.session.userName
+    res.locals.userRole = rq.session.userRole
+  }
+  next()
+})
+
+
 
 
 app.use(session(sessionConfig));
@@ -49,6 +52,16 @@ hbs.registerPartials(path.join(process.env.PWD, 'src', 'views', 'partials'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+hbs.registerHelper('ifAdmin', function(role){
+  return role === 'admin'
+})
+hbs.registerHelper('ifClient', function(role){
+  return role === 'admin'
+})
+hbs.registerHelper('ifTrainer', function(role) {
+  return role === 'trainer'
+})
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
