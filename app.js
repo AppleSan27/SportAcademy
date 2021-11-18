@@ -10,6 +10,7 @@ const registerRouter = require('./src/routes/register.router');
 const logoutRouter = require('./src/routes/logout.router');
 const cabinetRouter = require('./src/routes/cabinet.router');
 const policyRouter = require('./src/routes/policy.router');
+const addPost = require('./src/routes/addPost.router');
 
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
@@ -30,16 +31,15 @@ const sessionConfig = {
   
 }
 
-// app.use((req, res, next) => {
-//   if(req.session.userEmail) {
-//     res.locals.userEmail = req.session.userEmail
-//     res.locals.userName = req.session.userName
-//     res.locals.userRole = rq.session.userRole
-//   }
-//   next()
-// })
 
-
+app.use((req, res, next) => {
+  if(req.session.userEmail) {
+    res.locals.userEmail = req.session.userEmail
+    res.locals.userName = req.session.userName
+    res.locals.userRole = req.session.userRole
+  }
+  next()
+})
 
 
 app.use(session(sessionConfig));
@@ -53,6 +53,16 @@ hbs.registerPartials(path.join(process.env.PWD, 'src', 'views', 'partials'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
+
+app.use((req, res, next) => {
+  if(req.session.userEmail) {
+    res.locals.userEmail = req.session.userEmail
+    res.locals.userName = req.session.userName
+    res.locals.userStatus = req.session.userStatus
+  }
+  next()
+
 hbs.registerHelper('ifAdmin', function(role){
   return role === 'admin'
 })
@@ -61,6 +71,7 @@ hbs.registerHelper('ifClient', function(role){
 })
 hbs.registerHelper('ifTrainer', function(role) {
   return role === 'trainer'
+
 })
 
 app.use('/', indexRouter);
@@ -69,6 +80,7 @@ app.use('/register', registerRouter);
 app.use('/logout', logoutRouter);
 app.use('/cabinet', cabinetRouter);
 app.use('/policy', policyRouter);
+app.use('/addpost', addPost);
 
 
 app.listen(PORT, () => {

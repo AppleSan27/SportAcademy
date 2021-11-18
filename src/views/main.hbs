@@ -38,7 +38,9 @@
     </section>
     <section class="news">
       <h2 class="news__title">Новости</h2>
-      <!-- слфйдер -->
+      {{!-- защитить кнопку - только если сессия админа  --}}
+      <a class="header__button__out" href="/addpost" style="width:fit-content">Добавить новость</a>
+      <!-- слайдер -->
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
