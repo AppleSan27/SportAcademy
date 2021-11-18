@@ -6,12 +6,12 @@ function validatePhone(phone){
 
 function validateName(name){
   let reg = /^[a-zA-Z]{0,}|^[а-яА-Я]{0,}/g
-  return reg.test(phone);
+  return reg.test(name);
 }
 
 function validateSurname(surname){
   let reg = /^[a-zA-Z ]{0,}|^[а-яА-Я ]{0,}/g
-  return reg.test(phone);
+  return reg.test(surname);
 }
 
 module.exports = {
