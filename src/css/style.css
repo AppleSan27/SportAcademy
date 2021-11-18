@@ -168,6 +168,8 @@ margin-bottom: 5px;
 }
 .game__item__blur{
   padding: 15px;
+  height: 80%;
+  position: relative;
   /* filter: blur(13px);
   position: absolute;
   background-color: black;
@@ -204,4 +206,51 @@ transform: translateX(-50%);
   color: white;
   display:flex;
   font-size: 12px;
+  margin-bottom: auto;
 }
+
+.game__item__flex{
+  display: flex;
+position: absolute;
+bottom: 0;
+color:white
+
+}
+
+.game__item__flex p{
+  margin-right: 15px;
+}
+
+.slideb {
+  content: url(/src/img/photogallery/image-5.jpg);
+
+  height: 40px;
+}
+.footer__logo{
+  width: 150px ;
+  height: 50px;
+}
+
+/* .footer__c2{
+ 
+  height: 50px;
+} */
+.footer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.footer__c2{
+  display:flex;
+}
+.footer__r1{
+  display: flex;
+  justify-content: space-between;
+}
+.footer__r2{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* =====footer */
