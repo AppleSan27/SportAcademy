@@ -12,6 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3005;
 
 
+
 // const sessionConfig = {
 //   store: new FileStore(), // хранилище сессий
 //   key: 'smth', // ключ куки
