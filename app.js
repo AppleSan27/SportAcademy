@@ -3,13 +3,14 @@ const path = require('path');
 const hbs = require('hbs')
 require('dotenv').config();
 
+
+const indexRouter = require('./src/routes/index.router');
+const loginRouter = require('./src/routes/login.router')
 // const session = require('express-session');
 // const FileStore = require('session-file-store')(session);
 
-// const indexRouter = require('./src/routes/indexRouter')
-
 const app = express();
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 3000;
 
 
 // const sessionConfig = {
@@ -35,6 +36,10 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('hello')
 })
+
+app.use('/', indexRouter);
+app.use('/login', loginRouter);
+
 
 
 app.listen(PORT, () => {
