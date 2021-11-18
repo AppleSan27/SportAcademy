@@ -31,6 +31,7 @@ const sessionConfig = {
   
 }
 
+
 app.use((req, res, next) => {
   if(req.session.userEmail) {
     res.locals.userEmail = req.session.userEmail
@@ -39,6 +40,7 @@ app.use((req, res, next) => {
   }
   next()
 })
+
 
 app.use(session(sessionConfig));
 
