@@ -2,7 +2,7 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const saltRounds = 10; 
 const { User } = require('../db/models');
-const { validatePhone, validateName, validateSurname } = require('../help-functions');
+const { validatePhone, validateName, validateSurname } = require('../help-functions/helpers');
 
 
 router
