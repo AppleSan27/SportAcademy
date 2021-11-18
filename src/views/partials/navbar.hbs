@@ -1,30 +1,34 @@
-{{!-- <header class="header">
+<header class="header">
     <div class="wrapper">
 
       <div class="header__reg">
+        
         <img class="header__img" src="/img/logo.png">
         <div class="header__button">
-        {{#if userName}}
+        {{#if userEmail}}
           <a class="header__button__in" href="/logout">Выйти</a>
           <a class="header__button__out" href="/cabinet">Личный кабинет</a>
-        {{#unless userName}} 
+        {{/if}}
+        {{#unless userEmail}} 
           <a class="header__button__in" href="/login">Войти</a>
           <a class="header__button__out" href="/register">Зарегистрироваться</a>
         {{/unless}}
+       
           
         </div>
       </div>
 
       <div class="header__nav">
+        <a href="/">На главную</a>
         <a href="">Направления</a>
         <a href="">О нас</a>
         <a href="">Новости</a>
       </div>
     </div>
     </div>
-  </header> --}}
+  </header>
 
-
+{{!-- 
 <header class="header">
     <div class="wrapper">
 
@@ -43,4 +47,4 @@
       </div>
     </div>
     </div>
-  </header>
+  </header> --}}
