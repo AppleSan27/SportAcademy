@@ -13,14 +13,15 @@ router
   })
 
   .post(async (req, res) => {
-    const {email, password, phone, first_name, last_name} = req.body;
+    const {email, password, phone, first_name, last_name, role} = req.body;
+console.log(phone);
     try {
-      const users = await User.findAll({
+      const user = await User.findOne({
         where: {
           email: email,
         }
       })
-      if (users) {
+      if (user) {
         res.render('error', {
           message: `Пользователь email: ${email} уже существует`,
           error: {}
@@ -47,8 +48,8 @@ router
         })
       }
 
-      const hashedPassword = bcrypt.hash(password, saltRounds);
-      const newUser = await User.create({email, password: hashedPassword, phone, first_name, last_name });
+      const hashedPassword = await bcrypt.hash(password, saltRounds);
+      const newUser = await User.create({first_name, last_name, email, password: hashedPassword, phone, role });
 
       req.session.userName = newUser.first_name;
       req.session.userEmail = newUser.email;
@@ -59,7 +60,7 @@ router
     catch (err) {
       res.render('error', {
         message: `Ошибка записи в базу данных`,
-        error: {}
+        error: err
       })
     }
     
