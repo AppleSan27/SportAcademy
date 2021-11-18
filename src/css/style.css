@@ -6,11 +6,12 @@
   /* background-size: 100%;
   background-repeat: no-repeat; */
   position: relative;
+  min-height: fit-content;
   /* width: 100vw; */
 }
 
 .wrapper {
-  padding: 50px ;
+  padding: 50px;
   display: flex;
   /* max-width: 1000px;
   min-width: 600px;
@@ -20,7 +21,7 @@
   flex-direction: column;
   position: relative;
   /* justify-content: flex-end; */
-  
+  min-height: fit-content;
 }
 
 .header__img {
@@ -28,6 +29,7 @@
   margin-left: -20px;
   margin-right: auto;
   margin-bottom: 10px;
+  min-height: fit-content;
 }
 
 .header__reg,
@@ -37,6 +39,7 @@
 }
 
 .header__reg {
+  margin-bottom: 50px;
   /* grid-area: header__reg; */
 
   /* margin-bottom: calc(); */
@@ -48,11 +51,16 @@
 } */
 .header__button a,
 .header__nav a {
-margin-bottom: 5px;
+  margin-bottom: 5px;
   text-decoration: none;
+  padding: 5px;
+
 }
-.header__nav a{
-  min-width: 50px;
+
+.header__nav a {
+  /* min-width: 50px; */
+  min-width: 70px;
+
 }
 
 .header__button__in {
@@ -86,23 +94,27 @@ margin-bottom: 5px;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding:  5px 0;
- 
+  padding: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(240, 235, 235);
   /* padding:5px 10px ; */
   /* border: 1px solid red; */
   /* position: absolute;
   margin: 0 20px; */
- /* padding: 0 10px; */
+  /* padding: 0 10px; */
 }
 
 .header__nav a {
   color: aliceblue;
   text-decoration: none;
   margin-right: 10px;
-  padding:  0 10px;
+  padding: 0 10px;
   margin-left: 30px;
 }
-.header__nav a:nth-child(:first-child){
+
+.header__nav a:nth-child(:first-child) {
   margin-left: 30px;
 }
 
@@ -128,20 +140,23 @@ margin-bottom: 5px;
 }
 
 /* ===боди */
-.game__title{
+.game__title {
   text-align: center;
 }
+
 /* ===game_card */
-.game__list{
+.game__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
 }
+
 .game__list li {
-  margin:20px;
+  margin: 20px;
 
 }
+
 .game__item {
   display: block;
   background-image: url(/src/img/school-card-volley.jpg);
@@ -154,19 +169,21 @@ margin-bottom: 5px;
   z-index: 1;
   /* padding: px; */
 }
-.game__item::after{
+
+.game__item::after {
   content: "";
   filter: blur(13px);
   position: absolute;
   background-color: black;
-  top:0;
+  top: 0;
   width: 100%;
   height: 100%;
   opacity: 30%;
   border-radius: 10px;
   z-index: -5;
 }
-.game__item__blur{
+
+.game__item__blur {
   padding: 15px;
   height: 80%;
   position: relative;
@@ -180,7 +197,7 @@ margin-bottom: 5px;
   z-index: -5; */
 }
 
-.game__item__r1{
+.game__item__r1 {
   display: block;
   color: white;
   font-size: 30px;
@@ -191,40 +208,62 @@ margin-bottom: 5px;
   position: relative;
 
 }
-.game__item__r1::after{
-  content:"";
+
+.game__item__r1::after {
+  content: "";
   width: 30px;
   height: 2px;
   background-color: orange;
   position: absolute;
   bottom: -20px;
-  left:50%;
-transform: translateX(-50%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.game__item__r2{
+.game__item__r2 {
   color: white;
-  display:flex;
+  display: flex;
   font-size: 12px;
   margin-bottom: auto;
 }
 
-.game__item__flex{
+.game__item__flex {
   display: flex;
-position: absolute;
-bottom: 0;
-color:white
-
+  position: absolute;
+  bottom: 0;
+  color: white
 }
 
-.game__item__flex p{
+.game__item__flex p {
   margin-right: 15px;
 }
 
-.slideb {
-  content: url(/src/img/photogallery/image-5.jpg);
+.slideb_1,
+.slideb_2,
+.slideb_3 {
+  width: 100%;
+  height: 240px;
+  
+}
 
-  height: 40px;
+
+.slideb_1 {
+  background-image: url(/src/img/photogallery/image-5.jpg);
+  background-position: center -200px;
+  
+
+}
+
+.slideb_2 {
+  background-image: url(/src/img/photogallery/image-4.jpg);
+
+  background-position: center -200px;
+}
+
+.slideb_3 {
+  background-image: url(/src/img/photogallery/image-3.jpg);
+
+  background-position: center -200px;
 }
 
 
@@ -235,23 +274,144 @@ color:white
 
 
 /* =====footer */
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.footer__c2{
-  display:flex;
+
+.footer__c2 {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
 }
-.footer__r1{
+.footer__c2 li{
+  margin-right: 5px;
+}
+
+.footer__r1 {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__r2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  width: 150px;
+  height: 50px;
+}
+
+.footer__r1__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between;
+width: 100%;
+}
+@media (max-width: 400px){
+.footer__r1__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.footer__c2{
+  margin:auto 
 }
 .footer__r2{
-  display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  /* justify-content: center; */
+}
+.footer{
+  display: grid;
+  justify-content: center;
 }
 .footer__logo{
-  width: 150px ;
-  height: 50px;
+margin: auto;
+/* padding-top: 15px; */
+}
+} 
+
+.reviews__list{
+  background-color: rgb(237, 243, 243);
+}
+.reviews__title{
+  display: flex;
+  justify-content: center;
+}
+
+.reviews__div img{
+  height: 180px;
+width: 180px;
+}
+.reviews__div p{
+display: flex;
+justify-content: center;
+text-align: center;
+}
+.reviews__list{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.reviews__item{
+  display: block;
+  width: 180px;
+  min-height: 180px;
+margin:10px;
+}
+.map{
+  position: relative;
+}
+.map__contacts{
+  display: block;
+  width: 250px;
+  height: fit-content;
+  padding: 5px;
+  left:30px;
+  top:30px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 30px;
+  background-color: blanchedalmond;
+  box-shadow: 0 0 10px rgb(82, 76, 76);
+
+}
+.map__adress,
+.map__telephon
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.feedback{
+  background-color: lightslategray;
+  padding: 30px;
+}
+.feedback__title{
+  text-align: center;
+}
+
+.feedback__form{
+  display: flex;
+  justify-content: space-between;
+
+}
+.feedback__form input{
+width: 280px;
+height: 30px;
+}
+
+.feedback__button{
+  width: 280px;
+height: 30px;
+background-color: yellow;
+border: none;
 }
