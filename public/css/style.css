@@ -1,6 +1,6 @@
 .header {
   display: block;
-  background-image: url(/img/header-img.jpg);
+  background-image: url(/src/img/header-img.jpg);
   /* height: fit-content; */
   background-position: center -300px;
   /* background-size: 100%;
@@ -8,10 +8,12 @@
   position: relative;
   min-height: fit-content;
   /* width: 100vw; */
+  box-shadow: 0 0 45px rgb(82, 76, 76);
+  margin-bottom: 30px;
 }
 
 .wrapper {
-  padding: 50px;
+  padding: 50px 0;
   display: flex;
   /* max-width: 1000px;
   min-width: 600px;
@@ -23,8 +25,10 @@
   /* justify-content: flex-end; */
   min-height: fit-content;
 }
-
-.header__img {
+.header__img img {
+ margin-right: auto;
+}
+.header__img  img{
   width: 150px;
   margin-left: -20px;
   margin-right: auto;
@@ -36,10 +40,14 @@
 .header__button {
   display: flex;
   flex-wrap: wrap;
+ 
 }
 
 .header__reg {
   margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   /* grid-area: header__reg; */
 
   /* margin-bottom: calc(); */
@@ -60,6 +68,7 @@
 .header__nav a {
   /* min-width: 50px; */
   min-width: 70px;
+  margin: 0;
 
 }
 
@@ -85,6 +94,7 @@
 }
 
 .header__nav {
+  
   grid-area: header__nav;
   display: flex;
   background-color: rgb(14, 30, 60);
@@ -121,7 +131,7 @@
 
 /* ====footer */
 .main-footer__facebook {
-  content: url(/img/footer/facebook.svg);
+  content: url(/src/img/footer/facebook.svg);
   width: 33px;
   height: 33px;
 
@@ -132,11 +142,11 @@
 }
 
 .main-footer__instagram {
-  content: url(/img/footer/icon_instagram.svg);
+  content: url(/src/img/footer/icon_instagram.svg);
 }
 
 .main-footer__twitter {
-  content: url(/img/footer/icon_twitter.svg);
+  content: url(/src/img/footer/icon_twitter.svg);
 }
 
 /* ===боди */
@@ -159,7 +169,7 @@
 
 .game__item {
   display: block;
-  background-image: url(/img/school-card-volley.jpg);
+  background-image: url(/src/img/school-card-volley.jpg);
   height: 300px;
   width: 230px;
   border-radius: 10px;
@@ -206,18 +216,8 @@
   /* z-index: 10; */
   /* opacity: 0; */
   position: relative;
+  min-height: 80px;
 
-}
-
-.game__item__r1::after {
-  content: "";
-  width: 30px;
-  height: 2px;
-  background-color: orange;
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .game__item__r2 {
@@ -225,7 +225,22 @@
   display: flex;
   font-size: 12px;
   margin-bottom: auto;
+  padding-top: 20px;
+  min-height:fit-content;
+  margin-bottom: auto;
 }
+.game__item__r2::before{
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: orange;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
 
 .game__item__flex {
   display: flex;
@@ -264,6 +279,9 @@
   background-image: url(/src/img/photogallery/image-3.jpg);
 
   background-position: center -200px;
+}
+.news__title{
+  text-align: center;
 }
 
 
@@ -335,6 +353,12 @@ width: 100%;
 margin: auto;
 /* padding-top: 15px; */
 }
+.feedback__form{
+  display: flex;
+  justify-content: space-between;
+ flex-wrap: wrap;
+
+}
 } 
 
 .reviews__list{
@@ -343,6 +367,10 @@ margin: auto;
 .reviews__title{
   display: flex;
   justify-content: center;
+  margin: 40px;
+}
+.news__title{
+  margin-bottom: 40px;
 }
 
 .reviews__div img{
@@ -402,6 +430,7 @@ margin:10px;
 .feedback__form{
   display: flex;
   justify-content: space-between;
+ 
 
 }
 .feedback__form input{
