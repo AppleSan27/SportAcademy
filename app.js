@@ -30,14 +30,14 @@ const sessionConfig = {
   
 }
 
-app.use((req, res, next) => {
-  if(req.session.userEmail) {
-    res.locals.userEmail = req.session.userEmail
-    res.locals.userName = req.session.userName
-    res.locals.userRole = rq.session.userRole
-  }
-  next()
-})
+// app.use((req, res, next) => {
+//   if(req.session.userEmail) {
+//     res.locals.userEmail = req.session.userEmail
+//     res.locals.userName = req.session.userName
+//     res.locals.userRole = rq.session.userRole
+//   }
+//   next()
+// })
 
 
 
