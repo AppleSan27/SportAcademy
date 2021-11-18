@@ -1,0 +1,9 @@
+{{# if ifAdmin(userRole)}}
+{{/if}}
+<h1>Привет, Админ!</h1>
+{{# if ifClient(userRole)}}
+<h1>Привет, Клиент!</h1>
+{{/if}}
+{{# if ifTrainer(userRole)}}
+<h1><Привет, Тренер!/h1>
+{{/if}}
