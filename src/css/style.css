@@ -226,15 +226,15 @@ color:white
 
   height: 40px;
 }
-.footer__logo{
-  width: 150px ;
-  height: 50px;
-}
+
 
 /* .footer__c2{
  
   height: 50px;
 } */
+
+
+/* =====footer */
 .footer{
   display: flex;
   flex-direction: column;
@@ -251,6 +251,7 @@ color:white
   display: flex;
   justify-content: space-between;
 }
-
-
-/* =====footer */
+.footer__logo{
+  width: 150px ;
+  height: 50px;
+}
