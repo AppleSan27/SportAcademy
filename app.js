@@ -31,6 +31,14 @@ const sessionConfig = {
   
 }
 
+app.use((req, res, next) => {
+  if(req.session.userEmail) {
+    res.locals.userEmail = req.session.userEmail
+    res.locals.userName = req.session.userName
+    res.locals.userRole = req.session.userRole
+  }
+  next()
+})
 
 app.use(session(sessionConfig));
 
@@ -44,6 +52,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
+
 app.use((req, res, next) => {
   if(req.session.userEmail) {
     res.locals.userEmail = req.session.userEmail
@@ -51,6 +60,16 @@ app.use((req, res, next) => {
     res.locals.userStatus = req.session.userStatus
   }
   next()
+
+hbs.registerHelper('ifAdmin', function(role){
+  return role === 'admin'
+})
+hbs.registerHelper('ifClient', function(role){
+  return role === 'admin'
+})
+hbs.registerHelper('ifTrainer', function(role) {
+  return role === 'trainer'
+
 })
 
 app.use('/', indexRouter);
