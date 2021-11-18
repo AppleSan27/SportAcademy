@@ -13,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
     static associate({Sport,Pair}) {
       this.belongsToMany(Sport, {
         through: "Pairs",
-        key:"user_id"
+        foreignKey:"user_id"
       })
       this.belongsToMany(Pair, {
-        through: "Schedule",
-        key: "pair_id"
+        through: "Schedules",
+        foreignKey: "user_id"
       })
       // define association here
     }
