@@ -20,17 +20,18 @@
   },
   "homepage": "https://github.com/AppleSan27/SportAcademy#readme",
   "dependencies": {
-    "dotenv": "^10.0.0",
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
     "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.9.0",
-    "session": "^0.1.0"
+    "sequelize": "^6.9.0"
   },
   "devDependencies": {
-    "hbs": "^4.2.0",
-    "morgan": "^1.10.0",
+    "dotenv": "^10.0.0",
     "nodemon": "^2.0.15",
+    "express-session": "^1.17.2",
     "sequelize-cli": "^6.3.0"
   }
 }
