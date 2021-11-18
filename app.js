@@ -5,7 +5,12 @@ require('dotenv').config();
 
 
 const indexRouter = require('./src/routes/index.router');
-const loginRouter = require('./src/routes/login.router')
+const loginRouter = require('./src/routes/login.router');
+const registerRouter = require('./src/routes/register.router');
+const logoutRouter = require('./src/routes/logout.router');
+const cabinetRouter = require('./src/routes/cabinet.router');
+const policyRouter = require('./src/routes/policy.router');
+
 // const session = require('express-session');
 // const FileStore = require('session-file-store')(session);
 
@@ -33,12 +38,13 @@ hbs.registerPartials(path.join(process.env.PWD, 'src', 'views', 'partials'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('hello')
-})
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
+app.use('/register', registerRouter);
+app.use('/logout', logoutRouter);
+app.use('/cabinet', cabinetRouter);
+app.use('/policy', policyRouter);
 
 
 
