@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="zgASzy0OgcuWIHE6Go9brhoxhXtQFtsZ6L2SOQzC">
+
+  <title>Laravel</title>
+
+  <!-- Styles -->
+  
+  <link href="../../css/main.css" rel="stylesheet">
+
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
+
+  
+  <script src="../../libs/page-scale/page-scale.js"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bracket/0.11.1/jquery.bracket.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bracket/0.11.1/jquery.bracket.min.js"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ru.js"></script>
+
+  
+  <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.css'/>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.js'></script>
+
+  <!-- Scripts -->
+  
+  <script src="../../js/main.js"></script>
+
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="http://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      PageScaleJs(document.getElementById("app"), {
+        width: 1260,
+        height: 1000,
+        from: 1260,
+        to: 480,
+        onChangeScale: function (scale) {
+          //receive value of scale factor
+        }
+      });
+    });
+  </script>
+</head>
+<body class="user-profile-page">
+<div id="container">
+  <div id="app">
+    <header>
+
+      
+      <div class="desktop-header__container">
+        <div class="uk-grid-collapse uk-child-width-1-1 uk-visible@s" uk-grid>
+          <div class="desktop-header__top">
+            <div class="uk-container">
+
+              <div class="uk-grid-collapse uk-child-width-auto uk-flex-between" uk-grid>
+
+                
+                <div class="uk-flex uk-flex-middle">
+                  <div class="uk-grid-medium uk-child-width-auto" uk-grid>
+                    <div class="uk-flex uk-flex-middle">
+                      <a class="desktop-header__logo" href="../../index.html">
+                        <img src="../../img/logo.png" alt="Школа волейбола">
+                      </a>
+                    </div>
+                    <div class="uk-flex uk-flex-middle">
+                      <div class="desktop-header__desc"></div>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div class="uk-flex uk-flex-middle">
+                  <div class="uk-flex uk-flex-column uk-flex-bottom">
+                    <div>
+                      
+                                              <div class="uk-grid-small" uk-grid>
+                          <div>
+                            <a class="desktop-header__login" href="../../login.html">Войти</a>
+                          </div>
+                                                      <div>
+                              <a class="desktop-header__register" href="../../register.html">Зарегистрироваться</a>
+                            </div>
+                                                  </div>
+                                          </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="uk-margin">
+                <div class="desktop-header-navbar__container">
+                  <ul class="uk-navbar-nav">
+                    <li class="desktop-header-navbar__item"><a href="../../schools.html">Направления</a>
+                    </li>
+                    <li class="desktop-header-navbar__item"><a href="profi.html#">О нас</a></li>
+                    <li class="desktop-header-navbar__item"><a href="profi.html#">Новости</a></li>
+                    
+                    
+                    
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </header>
+
+    <main uk-height-viewport="expand: true">
+
+              <div class="breadcrumbs__container">
+    <div class="breadcrumbs__list">
+                        <div class="breadcrumbs__item">
+            <a href="../../index.html" class="breadcrumbs__link">Главная</a>
+          </div>
+                                <div class="breadcrumbs__item">
+            <a href="../../schools.html" class="breadcrumbs__link">Направления</a>
+          </div>
+                                <div class="breadcrumbs__item">
+            <a href="../volleyball.html" class="breadcrumbs__link">volleyball</a>
+          </div>
+                                <div class="breadcrumbs__item">
+            <span class="breadcrumbs__title">profi</span>
+          </div>
+                  </div>
+  </div>
+
+      
+        <div class="uk-container">
+    <h1>Школа волейбола (базовый уровень)</h1>
+
+    
+    <nav class="school-navbar__container uk-margin" uk-navbar="mode: click">
+      <div class="uk-navbar-left">
+
+        <ul class="uk-navbar-nav">
+          <li class="uk-active"><a href="../../teams.html">Команды</a></li>
+          <li><a href="../../games.html">Предстоящие игры</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="content-area">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.</div>
+
+    <h2>Условия</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.</p>
+
+    <h2>Цены</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.</p>
+
+    <div class="uk-flex uk-flex-center uk-margin-medium">
+      <div class="uk-child-width-1-1 uk-child-width-1-4@s" uk-grid>
+        <div>
+          <div class="price-card__item price-card--1">
+            <h6 class="price-card__type">Абонемент на 2 занятия</h6>
+            <div class="price-card__price">4 000 ₽</div>
+            <div class="price-card__plan">2 занятия</div>
+            <ul class="price-card__details">
+              <li>Преимущество 1</li>
+              <li>Преимущество 2</li>
+              <li>Преимущество 3</li>
+            </ul>
+            <a class="price-card__buy-button">Записаться</a>
+          </div>
+        </div>
+        <div>
+          <div class="price-card__item price-card--2">
+            <h6 class="price-card__type">Абонемент на 4 занятия</h6>
+            <div class="price-card__price">8 000 ₽</div>
+            <div class="price-card__plan">8 занятий</div>
+            <ul class="price-card__details">
+              <li>Преимущество 1</li>
+              <li>Преимущество 2</li>
+              <li>Преимущество 3</li>
+            </ul>
+            <a class="price-card__buy-button">Записаться</a>
+          </div>
+        </div>
+        <div>
+          <div class="price-card__item price-card--3">
+            <h6 class="price-card__type">Абонемент на 24 занятия</h6>
+            <div class="price-card__price">12 000 ₽</div>
+            <div class="price-card__plan">24 занятия</div>
+            <ul class="price-card__details">
+              <li>Преимущество 1</li>
+              <li>Преимущество 2</li>
+              <li>Преимущество 3</li>
+            </ul>
+            <a class="price-card__buy-button">Записаться</a>
+          </div>
+        </div>
+        <div>
+          <div class="price-card__item price-card--4">
+            <h6 class="price-card__type">Безлимитный абонемент</h6>
+            <div class="price-card__price">40 000 ₽</div>
+            <div class="price-card__plan">Безлимитный</div>
+            <ul class="price-card__details">
+              <li>Преимущество 1</li>
+              <li>Преимущество 2</li>
+              <li>Преимущество 3</li>
+            </ul>
+            <a class="price-card__buy-button">Записаться</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="uk-table uk-table-small uk-table-striped" hidden>
+      <thead>
+      <th>Услуга</th>
+      <th>Стоимость</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Просмотр в команде</td>
+        <td>550 руб.</td>
+      </tr>
+      <tr>
+        <td>Разовое занятие</td>
+        <td>800 руб.</td>
+      </tr>
+      <tr>
+        <td>Абонемент на 4 занятия</td>
+        <td>2 800 руб.</td>
+      </tr>
+      <tr>
+        <td>Абонемент на 8 занятий</td>
+        <td>4 800 руб.</td>
+      </tr>
+      <tr>
+        <td>Абонемент на 24 занятия</td>
+        <td>12 000 руб.</td>
+      </tr>
+      <tr>
+        <td>Безлимитный</td>
+        <td>40 000 руб.</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <h2>Тренеры</h2>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.</p>
+    </div>
+    <div class="uk-margin-medium">
+      <div class="uk-child-width-1-4@s" uk-grid>
+        <div>
+          <div class="trainer-card__item">
+            <div class="uk-grid-small uk-child-width-1-1" uk-grid>
+              <div class="uk-flex uk-flex-center">
+                <div class="trainer-card__img">
+                  <img src="../../img/trainer.png" alt="">
+                </div>
+              </div>
+              <div class="uk-flex uk-flex-column uk-flex-middle">
+                <div class="trainer-card__name">Антон Васильев</div>
+                <div class="trainer-card__title">КМС по классическому волейболу</div>
+              </div>
+              <div class="uk-flex uk-flex-center">
+                <div class="trainer-card__desc">Призер чемпиона России среди студентов. Игрок молодёжной сборной. Победитель этапа чемпионата Перми.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="trainer-card__item">
+            <div class="uk-grid-small uk-child-width-1-1" uk-grid>
+              <div class="uk-flex uk-flex-center">
+                <div class="trainer-card__img">
+                  <img src="../../img/trainer.png" alt="">
+                </div>
+              </div>
+              <div class="uk-flex uk-flex-column uk-flex-middle">
+                <div class="trainer-card__name">Антон Васильев</div>
+                <div class="trainer-card__title">КМС по классическому волейболу</div>
+              </div>
+              <div class="uk-flex uk-flex-center">
+                <div class="trainer-card__desc">Призер чемпиона России среди студентов. Игрок молодёжной сборной. Победитель этапа чемпионата Перми.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="trainer-card__item">
+            <div class="uk-grid-small uk-child-width-1-1" uk-grid>
+              <div class="uk-flex uk-flex-center">
+                <div class="trainer-card__img">
+                  <img src="../../img/trainer.png" alt="">
+                </div>
+              </div>
+              <div class="uk-flex uk-flex-column uk-flex-middle">
+                <div class="trainer-card__name">Антон Васильев</div>
+                <div class="trainer-card__title">КМС по классическому волейболу</div>
+              </div>
+              <div class="uk-flex uk-flex-center">
+                <div class="trainer-card__desc">Призер чемпиона России среди студентов. Игрок молодёжной сборной. Победитель этапа чемпионата Перми.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="trainer-card__item">
+            <div class="uk-grid-small uk-child-width-1-1" uk-grid>
+              <div class="uk-flex uk-flex-center">
+                <div class="trainer-card__img">
+                  <img src="../../img/trainer.png" alt="">
+                </div>
+              </div>
+              <div class="uk-flex uk-flex-column uk-flex-middle">
+                <div class="trainer-card__name">Антон Васильев</div>
+                <div class="trainer-card__title">КМС по классическому волейболу</div>
+              </div>
+              <div class="uk-flex uk-flex-center">
+                <div class="trainer-card__desc">Призер чемпиона России среди студентов. Игрок молодёжной сборной. Победитель этапа чемпионата Перми.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Расписание</h2>
+    <div id='calendar'></div>
+
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/locale/ru.js"></script>
+  <script>
+    $(function () {
+
+      $('#calendar').fullCalendar({
+        contentHeight: 450,
+        defaultView: 'month',
+
+        header: {
+          center: 'addEventButton'
+        },
+
+        customButtons: {
+          addEventButton: {
+            text: 'Добавить занятие',
+            click: function () {
+              var dateStr = prompt('Введдите дату в формате ГГГГ-ММ-ДД');
+              var date = moment(dateStr);
+
+              if (date.isValid()) {
+                $('#calendar').fullCalendar('renderEvent', {
+                  title: 'dynamic event',
+                  start: date,
+                  allDay: true
+                });
+                alert('Great. Now, update your database...');
+              } else {
+                alert('Invalid date.');
+              }
+            }
+          }
+        }
+      })
+
+      $('#calendar').fullCalendar('renderEvent', {
+        title: 'Тестовое занятие',
+        start: '2019-07-14',
+        allDay: true
+      });
+
+      var calendar = new Calendar('#calendar', {
+        events: [
+          { // this object will be "parsed" into an Event Object
+            title: 'The Title', // a property!
+            start: '2019-08-01', // a property!
+            end: '2019-09-08' // a property! ** see important note below about 'end' **
+          }
+        ]
+      });
+
+    });
+  </script>
+    </main>
+
+    <footer>
+      <!--Десктопный футер-->
+      <div class="footerTop__container uk-cover-container uk-visible@s">
+        <div class="uk-container uk-position-relative uk-position-z-index">
+          <div class="uk-grid-medium uk-child-width-auto uk-flex-between" uk-grid>
+            <div class="uk-width-1-1 uk-width-1-5@s">
+              <div class="uk-grid-large" uk-grid>
+                <div class="uk-width-1-1 uk-flex uk-flex-middle">
+                  <a href="../../index.html" class="footerTop__logo">
+                    <img src="../../img/logo-footer.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="uk-width-1-1 uk-width-1-4@s">
+              <div class="uk-grid-medium uk-child-width-1-1" uk-grid>
+                <div>
+                  <div class="uk-grid-large uk-child-width-1-1" uk-grid>
+                    <div class="uk-flex uk-flex-right">
+                      <a href="tel:88002452323" class="footerTop__phone">8 800 245-23-23</a>
+                    </div>
+                    <div class="uk-flex uk-flex-right">
+                      <a href="profi.html#modal-callback" uk-toggle class="footerTop__button">Оставить заявку</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Мобильный футер-->
+      <div class="footerMobileTop__container uk-hidden@s">
+        <a href="../../index.html" class="footerMobileTop__logo">
+          <img src="....html" alt="">
+        </a>
+        <div class="footerMobileTop__desc">
+          ...
+        </div>
+
+        <div class="uk-margin">
+          <div class="footerMobileTop__title">Меню</div>
+          ...
+        </div>
+
+        <div class="uk-grid-collapse uk-child-width-1-1 uk-margin" uk-grid>
+          <div class="uk-flex uk-flex-left">
+            <a href="tel:..." class="footerMobileTop__phone">...</a>
+          </div>
+          <div class="uk-flex uk-flex-left">
+            <a href="profi.html#modal-callback" uk-toggle class="footer__callback">Заказать звонок</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footerBottom__container">
+        <div class="uk-container">
+          <div class="uk-grid-small uk-flex-between" uk-grid>
+            <div class="uk-flex uk-flex-middle">
+              <div class="footerBottom__copy">
+                © 2019 - Академия Мегаспорт
+              </div>
+            </div>
+            <div class="uk-flex uk-flex-middle">
+              <a href="http://volley-test.tmweb.ru/privacy-policy/" class="footerBottom__pa">Политика конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{{userId}}
+<form class="my-5" action="/register" method="POST">
+<div class="mb-3">
+    <label for="first_name" class="form-label">Имя</label>
+    <input type="first_name" class="form-control" id="email" name="first_name" placeholder="введите ваше имя" required="required">
+  </div>
+  <div class="mb-3">
+    <label for="last_name" class="form-label">Фамилия</label>
+    <input type="last_name" class="form-control" id="email" name="last_name" placeholder="введите вашу фамилию" required="required">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="введите ваш email" required="required">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Пароль</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="придумайте пароль" required="required">
+  </div>
+   <div class="mb-3">
+    <label for="phone" class="form-label">Телефон</label>
+    <input type="phone" class="form-control" id="phone" name="phone" placeholder="введите ваш номер телефона" required="required">
+  </div>
+
+  <div class="mb-3">
+    <select name="role" class="form-select" aria-label="Default select example">
+      <option value="client">Клиент</option>
+      <option value="trainer">Тренер</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+</form>

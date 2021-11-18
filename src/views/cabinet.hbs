@@ -1,0 +1,20 @@
+{{# if ifAdmin(userRole)}}
+{{/if}}
+<h1>Привет, Админ!</h1>
+<br>
+<p>Админка</p>
+<div></div>
+{{# if ifClient(userRole)}}
+<h1>Привет, Клиент!</h1>
+<br>
+Твои тренировки
+<br>
+<div><select></select>/div>
+{{/if}}
+{{# if ifTrainer(userRole)}}
+<h1><Привет, Тренер!/h1>
+<br>
+Твои тренировки
+<br>
+<div><select></select>/div>
+{{/if}}
