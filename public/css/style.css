@@ -1,6 +1,6 @@
 .header {
   display: block;
-  background-image: url(/src/img/header-img.jpg);
+  background-image: url(/img/header-img.jpg);
   /* height: fit-content; */
   background-position: center -300px;
   /* background-size: 100%;
@@ -121,7 +121,7 @@
 
 /* ====footer */
 .main-footer__facebook {
-  content: url(/src/img/footer/facebook.svg);
+  content: url(/img/footer/facebook.svg);
   width: 33px;
   height: 33px;
 
@@ -132,11 +132,11 @@
 }
 
 .main-footer__instagram {
-  content: url(/src/img/footer/icon_instagram.svg);
+  content: url(/img/footer/icon_instagram.svg);
 }
 
 .main-footer__twitter {
-  content: url(/src/img/footer/icon_twitter.svg);
+  content: url(/img/footer/icon_twitter.svg);
 }
 
 /* ===боди */
@@ -159,7 +159,7 @@
 
 .game__item {
   display: block;
-  background-image: url(/src/img/school-card-volley.jpg);
+  background-image: url(/img/school-card-volley.jpg);
   height: 300px;
   width: 230px;
   border-radius: 10px;
