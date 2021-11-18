@@ -1,0 +1,91 @@
+
+
+
+
+.header{
+  background-image: url(/src/img/header-img.jpg);
+height: 140px;
+background-position:center -300px
+}
+.wrapper{
+  padding:50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__img{
+width: 150px;
+margin-left: -20px;
+margin-right: auto;
+}
+.header__reg,
+.header__button{
+  display: flex;
+  flex-wrap: wrap;
+}
+.header__reg{
+  
+}
+
+/* .header__button{
+  display: flex;
+
+} */
+.header__button a,
+.header__nav a
+{
+
+  text-decoration: none;
+}
+
+.header__button__in{
+  color: aliceblue;
+margin-right: 10px;
+max-width:fit-content;
+display: flex;
+border:1px solid aliceblue;
+border-radius: 5px;
+text-align: center;
+padding: 5px 10px;
+align-items: center;
+}
+.header__button__out {
+  display: flex;
+  background-color: rgb(240, 213, 51);
+  color:black;
+ padding: 5px 20px;
+ border-radius: 5px;
+ align-items: center;
+}
+
+.header__nav{
+  display: block;
+  background-color: rgb(14,30,60);
+
+}
+
+.header__nav a{
+  color: aliceblue;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+
+/* ====footer */
+.main-footer__facebook {
+  content: url(/src/img/footer/facebook.svg);
+  width: 33px;
+  height: 33px;
+
+}
+.main-footer__facebook:hover, .main-footer__instagram:hover, .main-footer__twitter:hover {
+  filter: drop-shadow(0 0 10px rgb(112, 179, 58));
+}
+
+.main-footer__instagram {
+  content: url(/src/img/footer/icon_instagram.svg);
+}
+
+.main-footer__twitter {
+  content: url(/src/img/footer/icon_twitter.svg);
+}
