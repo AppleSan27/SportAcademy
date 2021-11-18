@@ -27,7 +27,17 @@ const sessionConfig = {
   saveUninitialized: false, // сохраняем пустую сессию (чтоб посмотреть)
   httpOnly: true, // нельзя изменить куки с фронта
   cookie: { expires: 24 * 60 * 60e3 },
+  
 }
+
+// app.use((req, res, next) => {
+//   if(req.session.userEmail) {
+//     res.locals.userEmail = req.session.userEmail
+//     res.locals.userName = req.session.userName
+//   }
+//   next()
+// })
+
 
 app.use(session(sessionConfig));
 
