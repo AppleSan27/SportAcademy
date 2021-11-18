@@ -25,6 +25,7 @@ const PORT = process.env.PORT || 3005;
 
 // app.use(session(sessionConfig));
 
+app.use(express.static(path.join(process.env.PWD, 'public')));
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(process.env.PWD, 'src', 'views'));
@@ -34,7 +35,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('hello')
+  res.render('main')
+})
+
+app.get('/register', (req, res) => {
+  res.render('register')
 })
 
 
