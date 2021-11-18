@@ -1,0 +1,23 @@
+{
+  "name": "sportacademy",
+  "version": "1.0.0",
+  "description": "http://volley-test.tmweb.ru/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AppleSan27/SportAcademy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AppleSan27/SportAcademy/issues"
+  },
+  "homepage": "https://github.com/AppleSan27/SportAcademy#readme",
+  "dependencies": {
+    "hbs": "^4.2.0"
+  }
+}
