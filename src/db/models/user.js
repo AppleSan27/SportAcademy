@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       })
       this.hasMany(Schedule, {foreignKey: "user_id", as: "slot"}),
       this.hasMany(Pair, {foreignKey:"id", as: "oneUser"})
+      
     
     }
   };
