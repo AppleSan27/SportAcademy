@@ -1,4 +1,5 @@
 const { sequelize, User, Sport, Pair, Schedule } = require('../db/models');
+
 async function freeTreiner() {
   let n = Schedule.findAll({
     raw: true, where:
