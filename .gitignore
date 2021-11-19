@@ -8,7 +8,6 @@ lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-package-lock.json
 
 # Runtime data
 pids
@@ -41,8 +40,6 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-seeders/
-helper/
 
 # TypeScript v1 declaration files
 typings/
