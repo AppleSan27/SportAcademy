@@ -43,6 +43,7 @@ node_modules/
 jspm_packages/
 seeders/
 helper/
+volley-test.tmweb.ru/
 
 # TypeScript v1 declaration files
 typings/
