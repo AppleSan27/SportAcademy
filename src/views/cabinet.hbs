@@ -1,5 +1,6 @@
 
-{{#if (ifAdmin userRole)}} 
+{{#if (ifAdmin userRole)}}
+
 <script defer src='/js/admin.js'></script>
 <h1 style='text-align: center'>Личный кабинет администратора</h1>
 <br>
@@ -16,7 +17,7 @@
       <th scope="col"> Подтверждение </th>
     </tr>
   </thead>
-  <tbody button>{{#each list}}
+  <tbody button>{{#each listAdmin}}
     <tr>
       <th>{{this.first_name}} {{this.last_name}}</th>
       <td>{{this.email}}</td>
@@ -46,6 +47,8 @@
 {{/if}} 
 {{#if (ifClient userRole)}}
 
+<script defer src='/js/client.js'></script>
+
 <h1 style='text-align: center'>Личный кабинет клиента</h1>
 
 <p> 
@@ -68,7 +71,7 @@
     </tr>
   </thead>
   <div >
-    <tbody Расписание занятий>
+    <tbody button>
           {{#each freescheduleClient}}
     <tr>
       <th >{{this.data}}</th>
@@ -76,10 +79,12 @@
       <td >{{this.sport}}</td>
       <td>{{this.phone}}</td>
       <td>{{this.email}}</td>
-      <td>
-        <form name='change' action='/' method='POST'>
+
+      <td data-id={{this.id}}>
+        
         <button class="btn btn-warning" data-id={{this.id}}>Записаться</button>
-      </form>
+     
+
       </td>
     </tr>
           {{/each}}
@@ -135,5 +140,7 @@
 Ваши тренеровки
 </div>
 
-{{/if}}
+
+{{/if}} 
+
 

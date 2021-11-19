@@ -14,6 +14,7 @@ let n = await Schedule.findAll({
 )
 const data = n.map((el, i)=>{
   return {
+      id:el.id,
       data: el.date,
       treiner: el['Pair.oneUser.first_name']+' '+el['Pair.oneUser.last_name'],
       sport: el['Pair.onePair.name'],
