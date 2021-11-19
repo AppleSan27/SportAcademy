@@ -14,7 +14,7 @@ router
 
   .post(async (req, res) => {
     const {email, password, phone, first_name, last_name, role} = req.body;
-console.log(phone);
+console.log(req.body);
     try {
       const user = await User.findOne({
         where: {
