@@ -32,16 +32,6 @@ const sessionConfig = {
 }
 
 
-app.use((req, res, next) => {
-  if(req.session.userEmail) {
-    res.locals.userEmail = req.session.userEmail
-    res.locals.userName = req.session.userName
-    res.locals.userRole = req.session.userRole
-  }
-  next()
-})
-
-
 app.use(session(sessionConfig));
 
 app.use(express.static(path.join(process.env.PWD, 'public')));
@@ -62,6 +52,7 @@ app.use((req, res, next) => {
     res.locals.userStatus = req.session.userStatus
   }
   next()
+})
 
 hbs.registerHelper('ifAdmin', function(role){
   return role === 'admin'
@@ -81,7 +72,12 @@ app.use('/logout', logoutRouter);
 app.use('/cabinet', cabinetRouter);
 app.use('/policy', policyRouter);
 app.use('/addpost', addPost);
-
+app.get('*', (req,res) => {
+  res.render('error', {
+    message: 'error',
+    error: {status: 404}
+  })
+})
 
 app.listen(PORT, () => {
   console.log(`started at port ${PORT}`);
