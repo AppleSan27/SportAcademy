@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 3000;
 
 const sessionConfig = {
   store: new FileStore(), // хранилище сессий
-  key: 'smth', // ключ куки
+  key: 'sid', // ключ куки
   secret: 'gchjtghjkl;bjkll', // шифрование id сессии
   resave: false, // пересохранение сессии (когда что-то поменяли - false)
   saveUninitialized: false, // сохраняем пустую сессию (чтоб посмотреть)
@@ -30,7 +30,6 @@ const sessionConfig = {
   cookie: { expires: 24 * 60 * 60e3 },
   
 }
-
 
 app.use(session(sessionConfig));
 
@@ -43,15 +42,12 @@ hbs.registerPartials(path.join(process.env.PWD, 'src', 'views', 'partials'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
-
 app.use((req, res, next) => {
   if(req.session.userEmail) {
     res.locals.userEmail = req.session.userEmail
     res.locals.userName = req.session.userName
     res.locals.userStatus = req.session.userStatus
     res.locals.userRole = req.session.userRole.trim()
-
   }
   next()
 })
