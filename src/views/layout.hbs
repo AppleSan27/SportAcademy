@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   
+
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="/css/normalize.css" rel="stylesheet">
+  <link href="/css/normalize.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   <title>Лучший спортзал Москвы</title>
 </head>
-<body>
-  <header>{{> navbar}}</header>
-  <main>{{{body}}}</main>
-  <footer>{{> footer}}</footer>
+
+<body class="body">
+  <header class="header ">
+    <div class="wrapper container">
+
+      <div class="header__reg">
+
+        <a class="header__img" href="/"><img src="/img/logo.png"></a>
+
+        <div class="header__button">
+          {{#if userEmail}}
+          <a class="header__button__in" href="/logout">Выйти</a>
+          <a class="header__button__out" href="/cabinet">Личный кабинет</a>
+          {{/if}}
+          {{#unless userEmail}}
+          <a class="header__button__in" href="/login">Войти</a>
+          <a class="header__button__out" href="/register">Зарегистрироваться</a>
+          {{/unless}}
+
+
+        </div>
+      </div>
+
+      <div class="header__nav">
+        <a href="">Направления</a>
+        <a href="">О нас</a>
+        <a href="">Новости</a>
+      </div>
+    </div>
+    </div>
+  </header>
+  <main >{{{body}}}</main>
+  <footer class='container'>{{> footer}}</footer>
 
 </body>
+
 </html>

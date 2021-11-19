@@ -3,8 +3,6 @@ const { User } = require('../db/models');
 const bcrypt = require('bcrypt');
 const saltRounds = 10; 
 
-
-
 router
     .route('/')
     .get(( req, res) => {
@@ -12,6 +10,7 @@ router
     })
     .post( async (req, res) => {
       const { email, password } = req.body;
+      console.log(req.body);
       try {
         const currentUser = await User.findOne({
           where: {
@@ -21,6 +20,8 @@ router
         if(currentUser && (await bcrypt.compare(password, currentUser.password))) {
           req.session.userEmail = currentUser.email;
           req.session.userName = currentUser.name;
+          req.session.userRole = currentUser.role;
+          req.session.userId = currentUser.id;
           res.redirect('/');
         }
         res.render('error', {
@@ -31,7 +32,7 @@ router
       catch (err) {
         res.render('error', {
           message: `Ошибка чтения базы данных`,
-          error: {}
+          error: err
         })
       } 
     })

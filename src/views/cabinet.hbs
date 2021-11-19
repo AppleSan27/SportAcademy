@@ -1,20 +1,146 @@
-{{# if ifAdmin(userRole)}}
+
+{{#if (ifAdmin userRole)}}
+
+<script defer src='/js/admin.js'></script>
+<h1 style='text-align: center'>Личный кабинет администратора</h1>
+<br>
+<div style='padding-bottom: 50px' class='container'>
+    
+<table class="table">
+  <thead >
+    <tr>
+      <th scope="col">Имя</th>
+      <th scope="col">email</th>
+      <th scope="col">телефон</th>
+       <th scope="col"> Роль </th>
+      <th scope="col">  </th>
+      <th scope="col"> Подтверждение </th>
+    </tr>
+  </thead>
+  <tbody button>{{#each listAdmin}}
+    <tr>
+      <th>{{this.first_name}} {{this.last_name}}</th>
+      <td>{{this.email}}</td>
+       <td>{{this.phone}}</td>
+       <td>{{this.role}}</td>
+      <td id ={{this.id}} data-id={{this.id}}>{{this.status}}</td>
+      <td><button class="btn btn-warning" id ={{this.id}}>Принять</button></th>
+    </tr>{{/each}}
+</table>
+
+<form name='sport' action="/cabinet/update" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Имя Тренера</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="first_name">
+     <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Фамилия Тренера</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="last_name">
+  </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Название вида спорта</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="name">
+  </div>
+  <button type="submit" class="btn btn-warning">Добавить</button>
+</form>
+</div>
+{{/if}} 
+{{#if (ifClient userRole)}}
+
+<script defer src='/js/client.js'></script>
+
+<h1 style='text-align: center'>Личный кабинет клиента</h1>
+
+<p> 
+<div style='text-align: center'>
+Запись на тренировку
+</div>
+</p>
+<p>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Дата</th>
+      <th scope="col">Тренер</th>
+      <th scope="col">Секция</th>
+      <th scope="col">Номер телефона тренера</th>
+      <th scope="col">Email тренера</th>
+      <th scope="col"></th>
+       
+
+    </tr>
+  </thead>
+  <div >
+    <tbody button>
+          {{#each freescheduleClient}}
+    <tr>
+      <th >{{this.data}}</th>
+      <td>{{this.treiner}}</td>
+      <td >{{this.sport}}</td>
+      <td>{{this.phone}}</td>
+      <td>{{this.email}}</td>
+
+      <td data-id={{this.id}}>
+        
+        <button class="btn btn-warning" data-id={{this.id}}>Записаться</button>
+     
+
+      </td>
+    </tr>
+          {{/each}}
+    </tbody>
+  </div>
+</table>
+</p>
+<p> 
+<div style='text-align: center'>
+Ваши тренеровки
+</div>
+</p>
+
+<p>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Дата</th>
+      <th scope="col">Тренер</th>
+      <th scope="col">Секция</th>
+      <th scope="col">Номер телефона тренера</th>
+      <th scope="col">Email тренера</th>
+      <th scope="col"></th>
+
+    </tr>
+  </thead>
+  <div >
+    <tbody Расписание занятий>
+          {{#each scheduleClient}}
+    <tr>
+      <th >{{this.data}}</th>
+      <td>{{this.treiner}}</td>
+      <td >{{this.sport}}</td>
+      <td>{{this.phone}}</td>
+      <td>{{this.email}}</td>
+      <td>
+        <form name='change' action='/' method='POST'>
+        <button class="btn btn-warning" data-id={{this.id}}>Отменить запись</button>
+      </form>
+      </td>
+    </tr>
+          {{/each}}
+    </tbody>
+  </div>
+</table>
+</p>
+
+
 {{/if}}
-<h1>Привет, Админ!</h1>
-<br>
-<p>Админка</p>
-<div></div>
-{{# if ifClient(userRole)}}
-<h1>Привет, Клиент!</h1>
-<br>
-Твои тренировки
-<br>
-<div><select></select>/div>
-{{/if}}
-{{# if ifTrainer(userRole)}}
-<h1><Привет, Тренер!/h1>
-<br>
-Твои тренировки
-<br>
-<div><select></select>/div>
-{{/if}}
+{{#if (ifTrainer userRole)}}
+<h1 style='text-align: center'>Личный кабинет тренера</h1>
+<div style='text-align: center'>
+Ваши тренеровки
+</div>
+
+
+{{/if}} 
+
+
