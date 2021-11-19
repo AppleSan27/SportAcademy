@@ -3,8 +3,6 @@ const { User } = require('../db/models');
 const bcrypt = require('bcrypt');
 const saltRounds = 10; 
 
-
-
 router
     .route('/')
     .get(( req, res) => {

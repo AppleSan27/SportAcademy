@@ -1,7 +1,6 @@
 const { sequelize, User, Sport, Pair, Schedule } = require('../db/models');
 const { Op } = require("sequelize");
 
-
 async function TrainerList(id){
 let n = await Pair.findAll({
     raw: true, where:
@@ -29,6 +28,5 @@ const data = n.map((el, i)=>{
 })
 return data
 }
-// TrainerList(6).then(data => console.log(data))
 
 module.exports = TrainerList;
