@@ -1,5 +1,5 @@
 
-{{#if ifAdmin(userRole)}}
+{{#if (ifAdmin userRole)}} 
 <script defer src='/js/admin.js'></script>
 <h1>Привет, Админ!</h1>
 <br>
@@ -45,7 +45,7 @@
 </form>
 </div>
 {{/if}} 
-{{#if ifClient(userRole)}}
+{{#if (ifClient userRole)}}
 
 <h1>Привет, Клиент!</h1>
 
@@ -137,5 +137,5 @@
 <br>
 <div><select></select></div>
 
-{{/if}} --}}
+{{/if}}
 
