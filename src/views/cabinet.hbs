@@ -1,20 +1,21 @@
-{{#if ifAdmin(userRole)}}
+{{#if (ifAdmin userRole)}}
 <h1>Привет, Админ!</h1>
 <br>
 <p>Админка</p>
 <div></div>
 {{/if}}
-{{#if ifClient(userRole)}}
+{{#if (ifClient userRole) }}
 <h1>Привет, Клиент!</h1>
 <br>
 Твои тренировки
 <br>
 <div><select></select></div>
 {{/if}}
-{{#if ifTrainer(userRole)}}
+{{#if (ifTrainer userRole)}}
 <h1>Привет, Тренер!</h1>
 <br>
 Твои тренировки
 <br>
 <div><select></select></div>
 {{/if}}
+ 

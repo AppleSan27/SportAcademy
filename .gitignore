@@ -44,6 +44,7 @@ jspm_packages/
 seeders/
 helper/
 volley-test.tmweb.ru/
+src/db/config/
 
 # TypeScript v1 declaration files
 typings/
