@@ -1,10 +1,50 @@
-{{#if ifAdmin(userRole)}}
+{{!-- {{#if ifAdmin(userRole)}} --}}
+<script defer src='/js/admin.js'></script>
 <h1>Привет, Админ!</h1>
 <br>
 <p>Админка</p>
-<div></div>
-{{/if}}
-{{#if ifClient(userRole)}}
+<div>
+    
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Имя</th>
+      <th scope="col">email</th>
+      <th scope="col">телефон</th>
+       <th scope="col"> Роль </th>
+      <th scope="col">  </th>
+      <th scope="col"> Подтверждение </th>
+    </tr>
+  </thead>
+  <tbody button>{{#each list}}
+    <tr>
+      <th>{{this.first_name}} {{this.last_name}}</th>
+      <td>{{this.email}}</td>
+       <td>{{this.phone}}</td>
+       <td>{{this.role}}</td>
+      <td id ={{this.id}} data-id={{this.id}}>{{this.status}}</td>
+      <td><button id ={{this.id}}>Принять</button></th>
+    </tr>{{/each}}
+</table>
+
+<form name='sport' action="/cabinet/update" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Имя Тренера</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="first_name">
+     <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Фамилия Тренера</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="last_name">
+  </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Название вида спорта</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="name">
+  </div>
+  <button type="submit" class="btn btn-primary">Добавить</button>
+</form>
+</div>
+{{!-- {{/if}} --}}
+{{!-- {{#if ifClient(userRole)}}
 <h1>Привет, Клиент!</h1>
 <br>
 Твои тренировки
@@ -17,4 +57,4 @@
 Твои тренировки
 <br>
 <div><select></select></div>
-{{/if}}
+{{/if}} --}}
