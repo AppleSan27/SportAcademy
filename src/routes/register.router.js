@@ -14,7 +14,7 @@ router
 
   .post(async (req, res) => {
     const {email, password, phone, first_name, last_name, role} = req.body;
-console.log(phone);
+console.log(req.body);
     try {
       const user = await User.findOne({
         where: {
@@ -50,7 +50,7 @@ console.log(phone);
 
       const hashedPassword = await bcrypt.hash(password, saltRounds);
       const newUser = await User.create({first_name, last_name, email, password: hashedPassword, phone, role });
-
+   
       req.session.userName = newUser.first_name;
       req.session.userEmail = newUser.email;
       req.session.userId = newUser.id;

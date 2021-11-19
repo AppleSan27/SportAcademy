@@ -51,6 +51,8 @@ app.use((req, res, next) => {
     res.locals.userEmail = req.session.userEmail
     res.locals.userName = req.session.userName
     res.locals.userStatus = req.session.userStatus
+    res.locals.userRole = req.session.userRole.trim()
+
   }
   next()
 })
@@ -59,7 +61,7 @@ hbs.registerHelper('ifAdmin', function(role){
   return role === 'admin'
 })
 hbs.registerHelper('ifClient', function(role){
-  return role === 'admin'
+  return role === 'client'
 })
 hbs.registerHelper('ifTrainer', function(role) {
   return role === 'trainer'
