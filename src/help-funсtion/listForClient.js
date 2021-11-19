@@ -10,12 +10,9 @@ let n = await Schedule.findAll({
                { model:User, as: "oneUser"},
                { model:Sport, as: "onePair"}
             ]}
-            
     }
 )
-
 const data = n.map((el, i)=>{
-  
   return {
       id:el.id,
       data: el.date,
@@ -24,10 +21,8 @@ const data = n.map((el, i)=>{
       phone: el['Pair.oneUser.phone'],
       email: el['Pair.oneUser.email']
   }
-  
 })
 return data
 }
-
 
 module.exports = freeTreiner;

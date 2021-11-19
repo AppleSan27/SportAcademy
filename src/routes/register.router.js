@@ -4,7 +4,6 @@ const saltRounds = 10;
 const { User } = require('../db/models');
 const { validatePhone, validateName, validateSurname } = require('../help-funсtion/helpers');
 
-
 router
   .route('/')
 
