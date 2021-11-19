@@ -19,6 +19,7 @@ let n = await Pair.findAll({
 const data = n.map((el, i)=>{
   
   return {
+      id:el.id,
       data: el.date,
       client: el['treiner.User.first_name']+' '+el['treiner.User.last_name'],
       sport: el['onePair.name'],
