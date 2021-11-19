@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
+const logger = require('morgan');
 require('dotenv').config();
 
 
@@ -32,7 +33,7 @@ const sessionConfig = {
 }
 
 app.use(session(sessionConfig));
-
+app.use(logger('dev'));
 app.use(express.static(path.join(process.env.PWD, 'public')));
 
 app.set('view engine', 'hbs');

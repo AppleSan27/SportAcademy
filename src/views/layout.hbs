@@ -15,7 +15,35 @@
   <title>Лучший спортзал Москвы</title>
 </head>
 <body>
-  <header>{{> navbar}}</header>
+  <header class="header">
+    <div class="wrapper container">
+
+      <div class="header__reg">
+
+        <a class="header__img" href="/"><img  src="/img/logo.png"></a>
+
+        <div class="header__button">
+        {{#if userEmail}}
+          <a class="header__button__in" href="/logout">Выйти</a>
+          <a class="header__button__out" href="/cabinet">Личный кабинет</a>
+        {{/if}}
+        {{#unless userEmail}} 
+          <a class="header__button__in" href="/login">Войти</a>
+          <a class="header__button__out" href="/register">Зарегистрироваться</a>
+        {{/unless}}
+       
+          
+        </div>
+      </div>
+
+      <div class="header__nav">
+        <a href="">Направления</a>
+        <a href="">О нас</a>
+        <a href="">Новости</a>
+      </div>
+    </div>
+    </div>
+  </header>
   <main class='container'>{{{body}}}</main>
   <footer>{{> footer}}</footer>
 
