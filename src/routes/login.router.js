@@ -23,6 +23,7 @@ router
           req.session.userEmail = currentUser.email;
           req.session.userName = currentUser.name;
           req.session.userRole = currentUser.role;
+          req.session.userId = currentUser.id;
           res.redirect('/');
         }
         res.render('error', {

@@ -1,32 +1,32 @@
 const { sequelize, User, Sport, Pair, Schedule } = require('../db/models');
 
-async function freeTreiner() {
-  let n = Schedule.findAll({
+async function freeTreiner(users){
+let n = await Schedule.findAll({
     raw: true, where:
-      { user_id: null },
-    include: {
-      model: Pair,
-      include: [
-        { model: User, as: "oneUser" },
-        { model: Sport, as: "onePair" }
-      ]
+       { user_id: users},
+          include: {
+             model:Pair, 
+               include:[
+               { model:User, as: "oneUser"},
+               { model:Sport, as: "onePair"}
+            ]}
+            
     }
+)
 
+const data = n.map((el, i)=>{
+  
+  return {
+      data: el.date,
+      treiner: el['Pair.oneUser.first_name']+' '+el['Pair.oneUser.last_name'],
+      sport: el['Pair.onePair.name'],
+      phone: el['Pair.oneUser.phone'],
+      email: el['Pair.oneUser.email']
   }
-  )
-    .then(data => data.map((el, i) => {
-
-      el = {
-        data: el.date,
-        treiner: el['Pair.oneUser.first_name'] + ' ' + el['Pair.oneUser.last_name'],
-        sport: el['Pair.onePair.name'],
-        phone: el['Pair.oneUser.phone'],
-        email: el['Pair.oneUser.email']
-      }
-      return el
-    }))
-    .then(data => console.log(data))
-    .then(data => { return data })
+  
+})
+return data
 }
+
 
 module.exports = freeTreiner;

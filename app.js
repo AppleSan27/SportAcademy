@@ -51,6 +51,7 @@ app.use((req, res, next) => {
     res.locals.userName = req.session.userName
     res.locals.userStatus = req.session.userStatus
     res.locals.userRole = req.session.userRole.trim()
+
   }
   next()
 })

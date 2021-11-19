@@ -50,7 +50,7 @@ console.log(req.body);
 
       const hashedPassword = await bcrypt.hash(password, saltRounds);
       const newUser = await User.create({first_name, last_name, email, password: hashedPassword, phone, role });
-
+   
       req.session.userName = newUser.first_name;
       req.session.userEmail = newUser.email;
       req.session.userId = newUser.id;

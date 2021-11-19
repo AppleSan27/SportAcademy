@@ -1,10 +1,15 @@
 const router = require('express').Router();
-// const  { freeTreiner }  = require('../help-funсtion/listForClient')
+const  freeTreiner  = require('../help-funсtion/listForClient')
+
 
 router.get('/', async (req, res) => {
-  // const scheduleClient = await freeTreiner;
-  // console.log(scheduleClient);
-  res.render('cabinet')
+  console.log(req.session);
+  
+  const freescheduleClient = await freeTreiner(null);
+  console.log(freescheduleClient);
+  const scheduleClient = await freeTreiner(req.session.userId);
+
+  res.render('cabinet', { freescheduleClient, scheduleClient })
 })
 
 
