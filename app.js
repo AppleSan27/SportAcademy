@@ -22,12 +22,12 @@ const PORT = process.env.PORT || 3000;
 
 
 const sessionConfig = {
-  store: new FileStore(), // хранилище сессий
-  key: 'sid', // ключ куки
-  secret: 'gchjtghjkl;bjkll', // шифрование id сессии
-  resave: false, // пересохранение сессии (когда что-то поменяли - false)
-  saveUninitialized: false, // сохраняем пустую сессию (чтоб посмотреть)
-  httpOnly: true, // нельзя изменить куки с фронта
+  store: new FileStore(),
+  key: 'sid', 
+  secret: process.env.SECRET,
+  resave: false, 
+  saveUninitialized: false, 
+  httpOnly: true, 
   cookie: { expires: 24 * 60 * 60e3 },
   
 }

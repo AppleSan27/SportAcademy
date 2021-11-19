@@ -6,7 +6,7 @@
         <li class="game__item">
           <div class="game__item__blur">
             <p class="game__item__r1">Школа волейбола</p>
-            <p class="game__item__r2"> Краткое описание школы воллейбола</p>
+            <p class="game__item__r2"> Краткое описание школы</p>
             <div class="game__item__flex">
               <p class="game__item__p1">12 курсов</p>
               <p class="game__item__p2">рассписание</p>
@@ -16,7 +16,7 @@
         <li class="game__item">
           <div class="game__item__blur">
             <p class="game__item__r1">Школа футбола</p>
-            <p class="game__item__r2"> Краткое описание школы воллейбола</p>
+            <p class="game__item__r2"> Краткое описание школы</p>
             <div class="game__item__flex">
               <p class="game__item__p1">12 курсов</p>
               <p class="game__item__p2">рассписание</p>
@@ -26,7 +26,7 @@
         <li class="game__item">
           <div class="game__item__blur">
             <p class="game__item__r1">Школа бега</p>
-            <p class="game__item__r2"> Краткое описание школы воллейбола</p>
+            <p class="game__item__r2"> Краткое описание школы</p>
             <div class="game__item__flex">
               <p class="game__item__p1">12 курсов</p>
               <p class="game__item__p2">рассписание</p>
@@ -39,9 +39,9 @@
     <section class="news">
       <a name="news"> <h2 class="news__title">Новости</h2></a>
      
-      {{!-- защитить кнопку - только если сессия админа  --}}
+     {{#if (ifAdmin userRole)}} 
       <a class="header__button__out" href="/addpost" style="">Добавить новость</a>
-      <!-- слайдер -->
+    {{/if}} 
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
