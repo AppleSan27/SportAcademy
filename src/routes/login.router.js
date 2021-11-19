@@ -21,6 +21,7 @@ router
         if(currentUser && (await bcrypt.compare(password, currentUser.password))) {
           req.session.userEmail = currentUser.email;
           req.session.userName = currentUser.name;
+          req.session.userRole = currentUser.role;
           res.redirect('/');
         }
         res.render('error', {
