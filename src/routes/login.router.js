@@ -12,6 +12,7 @@ router
     })
     .post( async (req, res) => {
       const { email, password } = req.body;
+      console.log(req.body);
       try {
         const currentUser = await User.findOne({
           where: {
@@ -32,7 +33,7 @@ router
       catch (err) {
         res.render('error', {
           message: `Ошибка чтения базы данных`,
-          error: {}
+          error: err
         })
       } 
     })
