@@ -22,7 +22,8 @@
 
 
 Collaborators: 
-https://github.com/HoldTheWorld
-https://github.com/CainStr
+- https://github.com/HoldTheWorld
+- https://github.com/CainStr
+- https://github.com/mrr23005
   
 
